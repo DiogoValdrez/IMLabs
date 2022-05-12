@@ -1,0 +1,16 @@
+devlist("ni")
+d = daq("ni");
+d.Rate = fs;
+ch = addinput(d,"dev3..", "ai1..", "Voltage");
+ch.Range = [-range range];
+%d.Channels
+%d.Channels.TerminalConfig = "SingleEnded"; % é preciso isto?
+data = read(d, nsamples);%, "OutputFormat..?", "Matrix");
+%plot(data)
+
+
+
+.................................
+t = 0:1/fs:1.5;
+data = cos(2*pi*50*t);
+plot(x2)
